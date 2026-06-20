@@ -7,19 +7,16 @@ aws ecr get-login-password \
 | docker login \
 --username AWS \
 --password-stdin \
-496097747127.dkr.ecr.us-east-1.amazonaws.com
-
+448049807280.dkr.ecr.us-east-1.amazonaws.com
 
 docker build \
 -t nginx-demo \
 -f app/Dockerfile \
 app
 
-
 docker tag \
 nginx-demo:latest \
-496097747127.dkr.ecr.us-east-1.amazonaws.com/nginx-demo:latest
-
+448049807280.dkr.ecr.us-east-1.amazonaws.com/nginx-demo:latest
 
 docker push \
-496097747127.dkr.ecr.us-east-1.amazonaws.com/nginx-demo:latest
+448049807280.dkr.ecr.us-east-1.amazonaws.com/nginx-demo:latest
